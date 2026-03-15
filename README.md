@@ -15,6 +15,7 @@ The project covers four classification tasks:
 - **Sentiment**: whether the paragraph expresses opportunity, neutral, or risk
 - **Specificity**: whether the paragraph contains specific and concrete information
 - **Commitment**: whether the paragraph expresses goals, promises, or commitments
+![Text](./Text.png)
 
 ## Dataset
 The labeled dataset contains:
