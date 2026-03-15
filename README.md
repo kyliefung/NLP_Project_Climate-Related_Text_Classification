@@ -22,6 +22,7 @@ The labeled dataset contains:
 - 400 validation paragraphs
 - 1 million unlabeled paragraphs used for additional experiments in data boosting
 A key challenge is that the data is imbalanced, especially for the climate label. In addition, the labels sentiment, specificity, and commitment are only available when the paragraph is already labeled as climate-related. Because of this setup, the project uses macro F1-score as the main evaluation metric and applies 5-fold cross-validation for more robust evaluation.
+![Label Proportion](./Label_Proportion.png)
 
 ## Approaches Compared
 This project compares four NLP approaches:
@@ -42,6 +43,8 @@ Several preprocessing and feature engineering techniques were tested throughout 
 - link removal
 - alphabetic and alphanumeric token filtering
 - whitespace, NLTK, and transformer tokenization
+![Preprocessing](./Result_Tokenization.png)
+![Preprocessing](./Result_BoW.png)
 
 ## Results
 Among all approaches, transfer learning achieved the strongest overall performance. The best model was a fine-tuned ClimateBERT model, which obtained the following macro F1-scores
@@ -55,9 +58,11 @@ Overall, the project found that:
 - Bag-of-Words improved substantially over rule-based methods
 - Word embedding models performed better still
 - Transfer learning models delivered the best results across all label
+![Result](./Result_Summery.png)
 
 ## Key Takeaways
 1. Climate-related text classification can be approached effectively with modern NLP methods.
 2. Transfer learning, especially domain-adapted models such as ClimateBERT, clearly outperformed traditional baselines.
 3. Dataset imbalance and label dependency make macro F1-score a more suitable metric than accuracy.
 4. Data preprocessing and model selection had a strong impact on performance.
+![Concept of Word Embedding](./Word_Embedding.png)
